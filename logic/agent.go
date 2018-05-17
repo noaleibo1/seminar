@@ -2,6 +2,7 @@ package logic
 
 import (
 	"math/rand"
+	"math"
 )
 
 type Agent struct {
@@ -33,8 +34,13 @@ func CreateHumanAgents(n int) []*Agent {
 func MoveHumanAgentsOnce(agents []*Agent, currentTime TimeOfDay) {
 	for _, agent := range agents {
 		destinationCell := agent.GetNextCell(currentTime)
-		agent.ChooseTransportationMethod(destinationCell)
-		agent.MoveToCell(destinationCell)
+		if method := agent.ChooseTransportationMethod(destinationCell); method == Walk {
+			agent.MoveToCell(destinationCell)
+		} else {
+			agent.CurrentPlace.Bicycles--
+			destinationCell.DockingStations--
+			agent.MoveToCell(destinationCell)
+		}
 	}
 }
 
@@ -142,6 +148,28 @@ func (agent *Agent) getOtherNextCell(probabilityParameter float32, timeOfDay Tim
 	}
 }
 
-func (agent *Agent) ChooseTransportationMethod(destinationCell *Cell)  {
-	
+func (agent *Agent) ChooseTransportationMethod(destinationCell *Cell) TransportMethod {
+	if agent.CurrentPlace.Bicycles >= 1 && destinationCell.DockingStations >= 1{
+		hightDelta := destinationCell.Altitude - agent.CurrentPlace.Altitude
+		atan := math.Atan(float64(hightDelta / 25))
+		angle := atan * 180/math.Pi
+		if angle < SlopeThreshold && angle > -2{
+			//if rand.Float32()>0.1 {
+				NumberOfBicycleDecisions++
+				return Bicycle
+			//} else {
+			//	NumberOfPassesDueToRandom++
+			//	NumberOfWalkDecisions++
+			//	return Walk
+			//}
+
+		} else {
+			NumberOfPassesDueToTopography ++
+			NumberOfWalkDecisions++
+			return Walk
+		}
+	}
+	NumberOfPassesDueToNoInfra++
+	NumberOfWalkDecisions++
+	return Walk
 }

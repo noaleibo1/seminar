@@ -3,15 +3,27 @@ package logic
 import "math"
 
 const (
-	MatrixSize                   = 10
-	bicycleStationsGap           = 5
-	NumberOfAgents               = 50
-	NumberOfIterations           = 1
+	MatrixSize                   = 100
+	bicycleStationsGap           = 4
+
+	NumberOfAgents               = 10000
+
+	NumberOfIterations           = 90
+
+	MaxResidentialClusterSize = 2000
+	MinResidentialClusterSize = 400
+
+	MaxEmploymentClusterSize = 2000
+	MinEmploymentClusterSize = 500
+
+	SlopeThreshold = 1.5
+
+	citySteepness = 3
 )
 
 var (
 	totalNumberOfDockingStations = totalNumberOfBicycles * 2
-	totalNumberOfBicycles        = float64(NumberOfAgents / 10)
+	totalNumberOfBicycles        = float64(NumberOfAgents / 5)
 	numberOfBicycleStations      = float64((MatrixSize * MatrixSize) / bicycleStationsGap)
 	bicyclesPerStation           = int(math.Ceil(totalNumberOfBicycles / numberOfBicycleStations))
 	dockingStationsPerStation    = int(math.Ceil(totalNumberOfDockingStations / numberOfBicycleStations))
@@ -47,3 +59,9 @@ const (
 	Bicycle TransportMethod = iota
 	Walk
 )
+
+var NumberOfWalkDecisions = 0
+var NumberOfBicycleDecisions = 0
+var NumberOfPassesDueToTopography = 0
+var NumberOfPassesDueToNoInfra = 0
+var NumberOfPassesDueToRandom = 0
