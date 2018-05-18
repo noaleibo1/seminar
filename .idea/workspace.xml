@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47a2f541-3c54-462e-b2f4-50e40cabb3e6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logic/agent.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/agent.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logic/constants.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/constants.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logic/land_use.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/land_use.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result3.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,7 +27,7 @@
             <entry file="file://$PROJECT_DIR$/logic/constants.go">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="180">
-                  <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+                  <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -40,17 +44,22 @@
           <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="57" column="41" lean-forward="true" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+                <state relative-caret-position="255">
+                  <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="land_use.go" pinned="false" current-in-tab="true">
+          <file leaf-file-name="flat_result.csv" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/flat_result.csv">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file leaf-file-name="land_use.go" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/logic/land_use.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="130" column="80" selection-start-line="130" selection-start-column="80" selection-end-line="130" selection-end-column="80" />
+                <state relative-caret-position="180">
+                  <caret line="130" column="94" selection-start-line="130" selection-start-column="94" selection-end-line="130" selection-end-column="94" />
                 </state>
               </provider>
             </entry>
@@ -58,13 +67,8 @@
           <file leaf-file-name="agent.go" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/logic/agent.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="331">
-                  <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
-                  <folding>
-                    <element signature="n#!!block;n#getResidentialNextCell#0" />
-                    <element signature="n#!!block;n#getEmploymentNextCell#0" />
-                    <element signature="n#!!block;n#getOtherNextCell#0" />
-                  </folding>
+                <state relative-caret-position="256">
+                  <caret line="155" column="22" lean-forward="true" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -76,8 +80,8 @@
           <file leaf-file-name="constants.go" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/logic/constants.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+                <state relative-caret-position="270">
+                  <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -124,9 +128,9 @@
         <option value="$PROJECT_DIR$/logic/utils.go" />
         <option value="$PROJECT_DIR$/logic/BSS.go" />
         <option value="$PROJECT_DIR$/logic/bicycle_sharing_system.go" />
-        <option value="$PROJECT_DIR$/main.go" />
-        <option value="$PROJECT_DIR$/logic/agent.go" />
         <option value="$PROJECT_DIR$/logic/land_use.go" />
+        <option value="$PROJECT_DIR$/logic/agent.go" />
+        <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/logic/constants.go" />
       </list>
     </option>
@@ -218,16 +222,16 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="989" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="810" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09797657" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13161659" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289855" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31990793" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40289855" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32988507" />
@@ -285,11 +289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!block;n#getResidentialNextCell#0" />
-            <element signature="n#!!block;n#getEmploymentNextCell#0" />
-            <element signature="n#!!block;n#getOtherNextCell#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -325,11 +324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!block;n#getResidentialNextCell#0" />
-            <element signature="n#!!block;n#getEmploymentNextCell#0" />
-            <element signature="n#!!block;n#getOtherNextCell#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -352,11 +346,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!block;n#getResidentialNextCell#0" />
-            <element signature="n#!!block;n#getEmploymentNextCell#0" />
-            <element signature="n#!!block;n#getOtherNextCell#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -386,11 +375,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="145" column="4" lean-forward="true" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!block;n#getResidentialNextCell#0" />
-            <element signature="n#!!block;n#getEmploymentNextCell#0" />
-            <element signature="n#!!block;n#getOtherNextCell#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -419,11 +403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="n#!!block;n#getResidentialNextCell#0" />
-            <element signature="n#!!block;n#getEmploymentNextCell#0" />
-            <element signature="n#!!block;n#getOtherNextCell#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -454,11 +433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="n#!!block;n#getResidentialNextCell#0" />
-            <element signature="n#!!block;n#getEmploymentNextCell#0" />
-            <element signature="n#!!block;n#getOtherNextCell#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -491,13 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/go/1.10.1/libexec/src/math/pow.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/go/1.10.1/libexec/src/runtime/asm_amd64.s">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -526,39 +493,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
+    <entry file="file://$PROJECT_DIR$/result3.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.10.1/libexec/src/math/pow.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="57" column="41" lean-forward="true" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+        <state relative-caret-position="-1349">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic/land_use.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="130" column="94" selection-start-line="130" selection-start-column="94" selection-end-line="130" selection-end-column="94" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logic/agent.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
-          <folding>
-            <element signature="n#!!block;n#getResidentialNextCell#0" />
-            <element signature="n#!!block;n#getEmploymentNextCell#0" />
-            <element signature="n#!!block;n#getOtherNextCell#0" />
-          </folding>
+        <state relative-caret-position="256">
+          <caret line="155" column="22" lean-forward="true" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result3.csv">
+    <entry file="file://$PROJECT_DIR$/plane_results.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic/land_use.go">
+    <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="130" column="80" selection-start-line="130" selection-start-column="80" selection-end-line="130" selection-end-column="80" />
+        <state relative-caret-position="255">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flat_result.csv">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/logic/constants.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state relative-caret-position="270">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>

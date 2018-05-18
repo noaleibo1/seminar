@@ -1,8 +1,8 @@
 package logic
 
 import (
-	"math/rand"
 	"math"
+	"math/rand"
 )
 
 type Agent struct {
@@ -38,7 +38,6 @@ func MoveHumanAgentsOnce(agents []*Agent, currentTime TimeOfDay) {
 			agent.MoveToCell(destinationCell)
 		} else {
 			agent.CurrentPlace.Bicycles--
-			destinationCell.DockingStations--
 			agent.MoveToCell(destinationCell)
 		}
 	}
@@ -149,22 +148,16 @@ func (agent *Agent) getOtherNextCell(probabilityParameter float32, timeOfDay Tim
 }
 
 func (agent *Agent) ChooseTransportationMethod(destinationCell *Cell) TransportMethod {
-	if agent.CurrentPlace.Bicycles >= 1 && destinationCell.DockingStations >= 1{
+	if agent.CurrentPlace.Bicycles >= 1 && destinationCell.Bicycles+1 <= destinationCell.DockingStations {
 		hightDelta := destinationCell.Altitude - agent.CurrentPlace.Altitude
-		atan := math.Atan(float64(hightDelta / 25))
-		angle := atan * 180/math.Pi
-		if angle < SlopeThreshold && angle > -2{
-			//if rand.Float32()>0.1 {
-				NumberOfBicycleDecisions++
-				return Bicycle
-			//} else {
-			//	NumberOfPassesDueToRandom++
-			//	NumberOfWalkDecisions++
-			//	return Walk
-			//}
-
+		d := math.Sqrt(math.Pow(float64(destinationCell.I-agent.CurrentPlace.I),2) + math.Pow(float64(destinationCell.J-agent.CurrentPlace.J),2))*25
+		angle := float64(hightDelta)/d
+		randomDurability := rand.Float64()
+		if angle < SlopeThreshold+randomDurability {
+			NumberOfBicycleDecisions++
+			return Bicycle
 		} else {
-			NumberOfPassesDueToTopography ++
+			NumberOfPassesDueToTopography++
 			NumberOfWalkDecisions++
 			return Walk
 		}

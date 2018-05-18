@@ -16,15 +16,16 @@ const (
 	MaxEmploymentClusterSize = 2000
 	MinEmploymentClusterSize = 500
 
-	SlopeThreshold = 1.5
+	SlopeThreshold = 2.0
 
-	citySteepness = 3
+	cityHeightRange = 15
+	citySteepness   = 0
 )
 
 var (
 	totalNumberOfDockingStations = totalNumberOfBicycles * 2
-	totalNumberOfBicycles        = float64(NumberOfAgents / 5)
-	numberOfBicycleStations      = float64((MatrixSize * MatrixSize) / bicycleStationsGap)
+	totalNumberOfBicycles        = float64(NumberOfAgents / 10)
+	numberOfBicycleStations      = float64((MatrixSize / bicycleStationsGap) * (MatrixSize / bicycleStationsGap))
 	bicyclesPerStation           = int(math.Ceil(totalNumberOfBicycles / numberOfBicycleStations))
 	dockingStationsPerStation    = int(math.Ceil(totalNumberOfDockingStations / numberOfBicycleStations))
 )
@@ -65,3 +66,4 @@ var NumberOfBicycleDecisions = 0
 var NumberOfPassesDueToTopography = 0
 var NumberOfPassesDueToNoInfra = 0
 var NumberOfPassesDueToRandom = 0
+

@@ -8,14 +8,14 @@ import (
 )
 
 type Cell struct {
-	LandUse          LandUse
-	IsBicycleStation bool
-	Bicycles         int
-	DockingStations  int
-	I                int
-	J                int
-	IsAgent          bool
-	Altitude         float32
+	LandUse                 LandUse
+	IsBicycleStation        bool
+	Bicycles                int
+	DockingStations         int
+	I                       int
+	J                       int
+	IsAgent                 bool
+	Altitude                float32
 }
 
 type clusters []*cluster
@@ -126,9 +126,9 @@ func FillMatrixWithAltitude() {
 		for _, cell := range row {
 			fraction := rand.Float32()
 			if r := rand.Float32(); r > 0.5 {
-				cell.Altitude = float32(rand.Intn(citySteepness)) - fraction
+				cell.Altitude = float32(rand.Intn(cityHeightRange)) - fraction
 			} else {
-				cell.Altitude = float32(rand.Intn(citySteepness)) - fraction + 0
+				cell.Altitude = float32(rand.Intn(cityHeightRange)) - fraction + citySteepness
 			}
 		}
 	}

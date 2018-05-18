@@ -20,7 +20,17 @@ func main() {
 	writer := csv.NewWriter(file)
 	defer writer.Flush()
 
-	for i:=0;i<5;i++{
+	err = writer.Write([]string{
+		"iteration",
+		"numberOfWalkDecisions",
+		"NumberOfBicycleDecisions",
+		"NumberOfPassesDueToTopography",
+		"NumberOfPassesDueToRandom",
+		"NumberOfPassesDueToNoInfra",
+	})
+	checkError("Cannot write to file", err)
+
+	for i := 0; i < 10; i++ {
 		logic.NumberOfWalkDecisions = 0
 		logic.NumberOfBicycleDecisions = 0
 		logic.NumberOfPassesDueToTopography = 0
@@ -40,30 +50,20 @@ func main() {
 			logic.MoveHumanAgentsOnce(agents, logic.TimeOfDay(i))
 		}
 
-		writeToCSV(writer)
+		writeToCSV(writer, i+1)
 	}
 
 }
 
-func writeToCSV(writer *csv.Writer) {
+func writeToCSV(writer *csv.Writer, i int) {
+	is := fmt.Sprintf("%d", i)
+	a := fmt.Sprintf("%d", logic.NumberOfWalkDecisions)
+	b := fmt.Sprintf("%d", logic.NumberOfBicycleDecisions)
+	c := fmt.Sprintf("%d", logic.NumberOfPassesDueToTopography)
+	d := fmt.Sprintf("%d", logic.NumberOfPassesDueToRandom)
+	e := fmt.Sprintf("%d", logic.NumberOfPassesDueToNoInfra)
 
-
-	err := writer.Write([]string{"numberOfWalkDecisions", fmt.Sprintf("%d", logic.NumberOfWalkDecisions)})
-	checkError("Cannot write to file", err)
-
-	err = writer.Write([]string{"NumberOfBicycleDecisions", fmt.Sprintf("%d", logic.NumberOfBicycleDecisions)})
-	checkError("Cannot write to file", err)
-
-	err = writer.Write([]string{"NumberOfPassesDueToTopography", fmt.Sprintf("%d", logic.NumberOfPassesDueToTopography)})
-	checkError("Cannot write to file", err)
-
-	err = writer.Write([]string{"NumberOfPassesDueToRandom", fmt.Sprintf("%d", logic.NumberOfPassesDueToRandom)})
-	checkError("Cannot write to file", err)
-
-	err = writer.Write([]string{"NumberOfPassesDueToNoInfra", fmt.Sprintf("%d", logic.NumberOfPassesDueToNoInfra)})
-	checkError("Cannot write to file", err)
-
-	err = writer.Write([]string{"\n"})
+	err := writer.Write([]string{is, a, b, c, d, e})
 	checkError("Cannot write to file", err)
 }
 
